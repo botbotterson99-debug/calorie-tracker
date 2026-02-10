@@ -1,8 +1,0 @@
-CREATE TABLE IF NOT EXISTS meals (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  timestamp INTEGER NOT NULL,
-  image_url TEXT NOT NULL,
-  description TEXT NOT NULL,
-  calories INTEGER NOT NULL,
-  nutrients TEXT
-);

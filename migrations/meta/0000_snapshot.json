@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "4cfdd56c-3565-400b-ba91-ca507003c27e",
+  "id": "f60e48de-e8a2-4986-b357-db46a2b46757",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "meal_items": {
@@ -28,6 +28,13 @@
           "notNull": false,
           "autoincrement": false
         },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
         "amount": {
           "name": "amount",
           "type": "real",
@@ -42,6 +49,34 @@
           "notNull": false,
           "autoincrement": false,
           "default": "'grams'"
+        },
+        "calories": {
+          "name": "calories",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "protein": {
+          "name": "protein",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "carbs": {
+          "name": "carbs",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "fat": {
+          "name": "fat",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
         }
       },
       "indexes": {},
@@ -118,34 +153,6 @@
         "description": {
           "name": "description",
           "type": "text",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
-        },
-        "total_calories": {
-          "name": "total_calories",
-          "type": "real",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "total_protein": {
-          "name": "total_protein",
-          "type": "real",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
-        },
-        "total_carbs": {
-          "name": "total_carbs",
-          "type": "real",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
-        },
-        "total_fat": {
-          "name": "total_fat",
-          "type": "real",
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false

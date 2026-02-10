@@ -5,22 +5,8 @@
     {
       "idx": 0,
       "version": "6",
-      "when": 1770676881497,
-      "tag": "0000_add_sugar_to_products",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "6",
-      "when": 1770849600000,
-      "tag": "0003_meal_items_macros",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "6",
-      "when": 1770716779881,
-      "tag": "0002_cool_fantastic_four",
+      "when": 1770717065773,
+      "tag": "0000_ambitious_sleepwalker",
       "breakpoints": true
     }
   ]
