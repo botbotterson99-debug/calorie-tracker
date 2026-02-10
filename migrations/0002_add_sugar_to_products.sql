@@ -1,0 +1,1 @@
+ALTER TABLE `products` ADD COLUMN `sugar_per_100` real;

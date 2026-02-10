@@ -8,6 +8,7 @@ export const products = sqliteTable('products', {
   proteinPer100: real('protein_per_100'),
   carbsPer100: real('carbs_per_100'),
   fatPer100: real('fat_per_100'),
+  sugarPer100: real('sugar_per_100'),
   servingSize: real('serving_size'), // default unit grams/ml
   metadata: text('metadata', { mode: 'json' }), // for supermarket origin etc.
 });
@@ -19,10 +20,6 @@ export const meals = sqliteTable('meals', {
   name: text('name').notNull(), // e.g. "Truffle Burger"
   category: text('category').notNull(), // e.g. "Burger"
   description: text('description'),
-  totalCalories: real('total_calories').notNull(),
-  totalProtein: real('total_protein'),
-  totalCarbs: real('total_carbs'),
-  totalFat: real('total_fat'),
   isDefinitive: integer('is_definitive', { mode: 'boolean' }).default(false), // true if package info used
 });
 
@@ -30,6 +27,11 @@ export const mealItems = sqliteTable('meal_items', {
   id: integer('id').primaryKey({ autoIncrement: true }),
   mealId: integer('meal_id').references(() => meals.id),
   productId: integer('product_id').references(() => products.id),
+  name: text('name').notNull(), // e.g. "Chicken Breast", "Olive Oil"
   amount: real('amount').notNull(), // grams or units
   unit: text('unit').default('grams'),
+  calories: real('calories').notNull(),
+  protein: real('protein'),
+  carbs: real('carbs'),
+  fat: real('fat'),
 });
